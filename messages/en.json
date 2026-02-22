@@ -1,0 +1,606 @@
+{
+  "common": {
+    "readNow": "Read Now",
+    "bookmark": "Bookmark",
+    "share": "Share",
+    "search": "Search",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "viewMore": "View More",
+    "viewLess": "View Less"
+  },
+  "navigation": {
+    "home": "Home",
+    "browse": "Browse",
+    "library": "Library",
+    "genres": "Genres",
+    "hot": "Hot",
+    "recent": "Recent",
+    "profile": "Profile",
+    "history": "History",
+    "bookmarks": "Bookmarks",
+    "settings": "Settings",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search",
+    "allGenres": "All Genres",
+    "loadingGenres": "Loading genres...",
+    "mangaList": "Manga"
+  },
+  "manga": {
+    "status": {
+      "ongoing": "Ongoing",
+      "completed": "Completed",
+      "label": "Status"
+    },
+    "views": "{count} views",
+    "rating": "Rating: {rating}/5",
+    "chapters": "{count} chapters",
+    "latestChapter": "Latest Chapter",
+    "firstChapter": "First Chapter",
+    "continueReading": "Continue Reading",
+    "startReading": "Start Reading",
+    "description": "Description",
+    "author": "Author",
+    "artist": "Artist",
+    "translationGroup": "Translation Group",
+    "genres": "Genres",
+    "alternativeTitle": "Alternative Title",
+    "relatedManga": "Related Manga",
+    "recentlyUpdated": "Recently Updated",
+    "hot": "Hot",
+    "trending": "Trending",
+    "recommended": "Recommended",
+    "noResults": "Nothing found 😭",
+    "addToBookmarks": "Add to Bookmarks",
+    "removeFromBookmarks": "Remove from Bookmarks",
+    "bookmarked": "Bookmarked",
+    "comment": {
+      "addError": "Failed to add comment"
+    },
+    "detail": {
+      "uploadedBy": "Uploaded by",
+      "updatedAt": "Updated",
+      "chapterCount": "Total Chapters",
+      "sortNewest": "Newest",
+      "sortOldest": "Oldest",
+      "readingProgress": "Reading Progress",
+      "totalViews": "Total Views",
+      "searchChapter": "Search Chapter...",
+      "introduction": "Introduction",
+      "showMore": "Read More",
+      "showLess": "Show Less",
+      "noChapters": "No chapters found",
+      "searchChapterPlaceholder": "Search chapter number...",
+      "continueReading": "Continue",
+      "reading": "Reading"
+    }
+  },
+  "chapter": {
+    "chapter": "Chapter",
+    "chapterNumber": "Chapter {number}",
+    "previousChapter": "Previous Chapter",
+    "nextChapter": "Next Chapter",
+    "chapterList": "Chapter List",
+    "selectChapter": "Select Chapter",
+
+    "controls": {
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "fitWidth": "Fit Width",
+      "fitHeight": "Fit Height",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit Fullscreen"
+    },
+    "page": "Page {current}/{total}",
+    "loadingImages": "Loading images...",
+    "errorLoadingChapter": "Error loading chapter"
+  },
+  "reader": {
+    "settings": {
+      "title": "Reader Settings",
+      "description": "Customize your reading experience",
+
+      "readingDirection": {
+        "label": "Reading Direction",
+        "ltr": "Left to Right",
+        "ltrDesc": "Read from left to right",
+        "rtl": "Right to Left",
+        "rtlDesc": "Read from right to left (Japanese Manga)"
+      },
+      "zoom": {
+        "label": "Zoom Level"
+      },
+      "backgroundColor": {
+        "label": "Background Color",
+        "description": "Choose background color for the reader"
+      },
+      "imageSpacing": {
+        "label": "Image Spacing",
+        "description": "Adjust spacing between images"
+      }
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "emailOrUsername": "Email or Username",
+    "emailOrUsernamePlaceholder": "Enter email or username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Name",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "loginWithGoogle": "Login with Google",
+    "registerWithGoogle": "Register with Google",
+    "continueWithGoogle": "Continue with Google",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful",
+    "registerSuccess": "Registration successful",
+    "welcomeBack": "Welcome back!",
+    "termsAndConditions": "Terms and Conditions",
+    "agreeToTerms": "I agree to the Terms and Conditions",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "createAccount": "Create Account",
+    "signingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "orContinueWith": "Or continue with",
+    "emailPlaceholder": "user@example.com",
+    "passwordPlaceholder": "Enter your password",
+    "newPasswordPlaceholder": "Create a password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "namePlaceholder": "Enter your name",
+    "enterEmailAndPassword": "Enter your email/username and password to sign in",
+    "enterInfoToCreateAccount": "Enter your information to create an account",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "showPassword": "Show Password",
+    "hidePassword": "Hide Password",
+    "loginFailed": "Login failed",
+    "registerFailed": "Registration failed",
+    "invalidEmailOrPassword": "Invalid email or password",
+    "unableToCreateAccount": "Unable to create account. Please try again.",
+    "accountCreatedSuccess": "Your account has been created successfully.",
+    "signedInSuccess": "You have been successfully signed in.",
+    "welcomeToMangaReader": "Welcome to Manga Reader!",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "agreeToTermsFull": "I agree to the",
+    "and": "and",
+    "googleAuthSuccess": "Google authentication successful!",
+    "googleAuthFailed": "Google authentication failed",
+    "failedToSignInWithGoogle": "Failed to sign in with Google"
+  },
+  "user": {
+    "profilePage": "Profile Page",
+    "editProfile": "Edit Profile",
+    "changePassword": "Change Password",
+    "changeAvatar": "Change Avatar",
+    "points": "Points",
+    "totalPoints": "Total Points: {points}",
+    "usedPoints": "Used: {points}",
+    "availablePoints": "Available: {points}",
+    "achievements": "Achievements",
+    "pets": "Pets",
+    "currentPet": "Current Pet",
+    "readingStats": "Reading Statistics",
+    "chaptersRead": "Chapters Read",
+    "timeSpent": "Time Spent",
+    "favoriteGenres": "Favorite Genres",
+    "readingStreak": "Reading Streak",
+    "library": {
+      "title": "My Library",
+      "subtitle": "Manage bookmarked manga and reading history",
+      "tabs": {
+        "continue": "Continue",
+        "continueShort": "Continue",
+        "bookmarks": "Bookmarks",
+        "bookmarksShort": "Bookmarks",
+        "history": "History",
+        "historyShort": "History"
+      },
+      "stats": {
+        "totalBookmarks": "{count} bookmarked manga",
+        "totalHistory": "{count} manga in history"
+      },
+      "emptyStates": {
+        "continue": {
+          "title": "No reading history",
+          "description": "Start reading manga to see your progress here",
+          "action": "Explore Manga"
+        },
+        "bookmarks": {
+          "title": "No bookmarked manga",
+          "description": "Bookmark your favorite manga to easily follow them",
+          "action": "Find Great Manga"
+        },
+        "history": {
+          "title": "History is empty",
+          "description": "Manga you've read will appear here",
+          "action": "Start Reading"
+        }
+      },
+      "card": {
+        "progress": "Chapter {current}",
+        "continue": "Continue",
+        "start": "Start Reading",
+        "remove": "Remove"
+      },
+      "viewAllHistory": "View All History",
+      "historyRemoved": "Removed from history",
+      "errors": {
+        "loadFailed": "Failed to load data. Please try again.",
+        "removeFailed": "Failed to remove. Please try again."
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Manage your personal information and track your achievements",
+      "editProfile": "Edit Profile",
+      "accountSettings": "Account Settings",
+      "backToProfile": "Back to Profile",
+      "editForm": {
+        "title": "Edit Information",
+        "success": "Profile updated successfully",
+        "error": "Failed to update profile. Please try again.",
+        "avatarLabel": "Avatar",
+        "avatarDescription": "Upload new avatar. Max size 5MB. Formats: JPG, PNG, GIF, WebP.",
+        "avatarUploading": "Uploading image...",
+        "avatarUploadSuccess": "Avatar has been updated!",
+        "avatarUploadError": "Failed to upload image. Please try again.",
+        "avatarSelectFile": "Select Image",
+        "avatarFileSelected": "File selected: {filename}",
+        "avatarPreview": "Preview",
+        "namePlaceholder": "Enter your name",
+        "emailPlaceholder": "Enter your email",
+        "saveChanges": "Save Changes",
+        "upload": "Upload",
+        "cancel": "Cancel",
+        "remove": "Remove"
+      },
+      "passwordForm": {
+        "title": "Change Password",
+        "success": "Password changed successfully",
+        "error": "Password change failed",
+        "currentPassword": "Current Password",
+        "currentPasswordPlaceholder": "Enter current password",
+        "newPassword": "New Password",
+        "newPasswordPlaceholder": "Enter new password",
+        "confirmPassword": "Confirm Password",
+        "confirmPasswordPlaceholder": "Confirm new password",
+        "changePassword": "Change Password"
+      },
+      "sections": {
+        "statistics": "Statistics",
+        "achievements": "Achievements"
+      },
+      "fields": {
+        "totalPoints": "Total Points",
+        "usedPoints": "Used Points",
+        "availablePoints": "Available Points",
+        "achievementsPoints": "Achievement Points"
+      },
+      "emptyStates": {
+        "noAchievements": "No achievements yet",
+        "noPet": "No pets yet"
+      },
+      "nameMinChars": "Name must be at least 2 characters",
+      "nameMaxChars": "Name must be at most 50 characters",
+      "emailInvalid": "Email is invalid",
+      "passwordMinLength": "New password must be at least 6 characters",
+      "passwordMaxLength": "Password is too long",
+      "currentPasswordRequired": "Please enter current password",
+      "passwordConfirmationRequired": "Please confirm password",
+      "passwordMismatch": "Password confirmation does not match",
+      "fileRequired": "Please select a file",
+      "fileSizeExceeded": "Maximum file size is 5MB",
+      "fileTypeInvalid": "Only image files are allowed (JPG, PNG, GIF, WebP)",
+      "avatarRequired": "Please select an avatar",
+      "updateFailed": "Failed to update profile",
+      "avatarUploadFailed": "Failed to upload avatar",
+      "passwordUpdateFailed": "Failed to change password"
+    }
+  },
+  "search": {
+    "search": "Search",
+    "searchPlaceholder": "Search manga title, author...",
+    "searchResults": "Search Results",
+    "noResults": "No results found",
+    "searchFor": "Results for \"{query}\"",
+    "advancedSearch": "Advanced Search",
+    "filters": "filters",
+    "sortBy": "Sort by",
+    "toggleSearch": "Toggle Search",
+    "closeSearch": "Close Search",
+    "searching": "Searching...",
+    "resultsFound": "Found {count} results",
+    "viewAllResults": "View all {count} results",
+    "noResultsTitle": "No results found",
+    "noResultsMessage": "Try searching with different keywords",
+    "minCharacters": "Enter at least 2 characters to search",
+    "sort": {
+      "latest": "Latest",
+      "views": "Views",
+      "rating": "Rating",
+      "name": "Name A-Z"
+    },
+    "filterByGenre": "Filter by Genre",
+    "filterByStatus": "Filter by Status",
+    "clearFilters": "Clear Filters"
+  },
+  "comment": {
+    "title": "Comments",
+    "placeholder": "Write your comment...",
+    "replyPlaceholder": "Reply to @{name}...",
+    "replyingTo": "Replying to @{name}",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "submitHint": "Ctrl + Enter to submit",
+    "reply": "Reply",
+    "loading": "Loading...",
+    "loadMore": "Load More Comments",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "showReplies": "View {count} replies",
+    "hideReplies": "Hide replies",
+    "empty": "No comments yet",
+    "emptyHint": "Be the first to comment!",
+    "listLabel": "Comments List",
+    "loginRequired": "Login to comment",
+    "addSuccess": "Comment added",
+    "addError": "Failed to add comment",
+    "captchaWrong": "Wrong answer",
+    "badge": {
+      "chapter": "CH",
+      "manga": "MG",
+      "chapterAria": "Chapter comment",
+      "mangaAria": "Manga comment",
+      "chapterTooltip": "Comment about this chapter",
+      "mangaTooltip": "Comment about the entire manga"
+    },
+    "unknownTime": "Unknown time",
+    "errors": {
+      "contentRequired": "Please enter content",
+      "contentTooLong": "Comment too long (max 2000 characters)"
+    }
+  },
+  "tabs": {
+    "chapterComments": "Chapter Comments",
+    "mangaComments": "Manga Comments",
+    "allComments": "All Comments"
+  },
+  "activeTab": "Currently viewing {{tab}} tab",
+  "swipeHint": "Swipe left or right to switch tabs",
+  "emojiPicker": {
+    "search": "Search emoji...",
+    "noEmojiFound": "No emoji found"
+  },
+  "rating": {
+    "rateThisManga": "Rate this manga",
+    "yourRating": "Your Rating",
+    "averageRating": "Average Rating",
+    "totalRatings": "{count} ratings",
+    "ratingSubmitted": "Rating submitted",
+    "loginRequired": "Login to rate",
+    "success": "Rating submitted!",
+    "error": "Failed to rate. Please try again.",
+    "starRatingLabel": "Star rating",
+    "rateStarsLabel": "Rate {value} out of 5 stars",
+    "voted": "Voted"
+  },
+  "errors": {
+    "general": "An error occurred. Please try again.",
+    "network": "Network error",
+    "notFound": "Not Found",
+    "unauthorized": "You need to login to perform this action",
+    "forbidden": "You don't have permission to access this",
+    "serverError": "Server error. Please try again later.",
+    "validation": "Invalid data",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home",
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDescription": "The page you're looking for doesn't exist or has been removed."
+  },
+  "notFoundPage": {
+    "title": "404 - Lost in Translation",
+    "heading": "Oops! You're lost?",
+    "description": "The page you're looking for seems to have been transported to another world...",
+    "backButton": "Go Back",
+    "homeButton": "Back to Home"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "account": "Account",
+    "login": "Login",
+    "register": "Register",
+    "followUs": "Follow Us",
+    "brandName": "Manga Reader",
+    "tagline": "Your favorite place to read manga online.",
+    "copyright": "© {year} Manga Reader. All rights reserved.",
+    "about": "About",
+    "contact": "Contact",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "notifications": {
+    "newChapter": "New chapter has been updated",
+    "bookmarkAdded": "Manga added to library",
+    "bookmarkRemoved": "Removed from library",
+    "profileUpdated": "Profile updated",
+    "passwordChanged": "Password changed"
+  },
+  "homepage": {
+    "h1": "Động Hentai - Read Vietnamese Hentai For Free",
+    "hero": {
+      "title": "Read Manga Online",
+      "titleHighlight": "Free & No Ads",
+      "description": "Thousands of hottest manga, continuously updated. Read high-quality Vietnamese manga smoothly on all devices.",
+      "exploreNow": "Explore Now",
+      "browseGenres": "Browse Genres",
+      "exploreMore": "Explore More",
+      "hot": "Hot",
+      "ongoing": "Ongoing",
+      "completed": "Completed"
+    },
+    "sections": {
+      "recentlyUpdated": "Hot New Releases",
+      "hotManga": "Most Popular",
+      "newestManga": "Newest Manga",
+      "topRanked": "Top Favorites",
+      "recommended": "Recommended For You",
+      "viewAll": "View All",
+      "tabs": {
+        "day": "Day",
+        "month": "Month",
+        "all": "All"
+      },
+      "recentComments": "Recent Comments"
+    },
+    "mangaCard": {
+      "hot": "Hot",
+      "ongoing": "Ongoing",
+      "completed": "Completed",
+      "chapter": "Chapter",
+      "noChapter": "No Chapter",
+      "timeAgo": {
+        "justNow": "Just now",
+        "minutesAgo": "{count}m ago",
+        "hoursAgo": "{count}h ago",
+        "daysAgo": "{count}d ago",
+        "monthsAgo": "{count}mo ago",
+        "yearsAgo": "{count}y ago"
+      }
+    },
+    "emptyStates": {
+      "noManga": "No manga available",
+      "loadError": "Failed to load manga list. Please try again later.",
+      "loadErrorHot": "Failed to load hot manga list. Please try again later."
+    },
+    "genres": {
+      "explore": "Explore",
+      "drama": "Drama",
+      "action": "Action",
+      "romance": "Romance",
+      "fantasy": "Fantasy"
+    }
+  },
+  "browse": {
+    "title": "Manga List",
+    "totalResults": "Found {count} manga",
+    "applyFilters": "Filter",
+    "clearFilters": "Clear Filters",
+    "searchPlaceholder": "Search manga title...",
+    "status": {
+      "label": "Status",
+      "all": "All",
+      "ongoing": "Ongoing",
+      "completed": "Completed"
+    },
+    "sort": {
+      "label": "Sort by",
+      "latest": "Latest Update",
+      "views": "Views",
+      "rating": "Rating",
+      "name": "Name A-Z"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page}"
+    },
+    "noResults": "Nothing found 😭",
+    "noResultsDescription": "Try changing filters or search for something else"
+  },
+  "pwa": {
+    "name": "Manga Reader",
+    "shortName": "Manga",
+    "description": "Read manga online for free in high quality"
+  },
+  "seo": {
+    "default": {
+      "title": "{siteName} - Read Manga Online Free",
+      "template": "%s | {siteName}",
+      "description": "Read manga online for free in high quality. Thousands of manga updated daily. Fast, free, and no popup ads."
+    },
+    "browse": {
+      "title": "Browse Manga",
+      "description": "Browse and search manga by genre, status, and sort. Discover thousands of the hottest manga."
+    },
+    "manga": {
+      "description": "Read {name} online. {pilot}"
+    },
+    "chapter": {
+      "description": "Read {mangaName} {chapterName} online. Updated fastest, high quality.",
+      "keywords": {
+        "read": "read manga",
+        "chapter": "chapter"
+      }
+    },
+    "genre": {
+      "title": "Genre {name}",
+      "description": "Discover {name} manga. Read {name} comics free, updated continuously.",
+      "keywords": {
+        "genre": "genre",
+        "manga": "manga",
+        "comic": "comic"
+      }
+    },
+    "search": {
+      "title": "Search: {query}",
+      "description": "Search results for \"{query}\". Find manga, authors, genres and more.",
+      "keywords": {
+        "search": "search"
+      }
+    },
+    "profile": {
+      "title": "Profile - {name}",
+      "description": "Manga library and reading history of {name}"
+    },
+    "library": {
+      "title": "My Library",
+      "description": "Manage saved manga, reading history and reading progress."
+    },
+    "artist": {
+      "title": "Author {name}",
+      "description": "View all manga by author {name}. Read comics online free.",
+      "keywords": {
+        "artist": "author"
+      }
+    },
+    "og": {
+      "siteName": "{siteName}",
+      "alt": "{siteName} - Read Manga Online"
+    },
+    "twitter": {
+      "title": "{siteName} - Read Manga Online",
+      "description": "Read manga online for free in high quality. Thousands of manga updated daily."
+    },
+    "keywords": [
+      "manga",
+      "read manga",
+      "manga online",
+      "free manga",
+      "manga reader",
+      "comics",
+      "graphic novels",
+      "webtoons"
+    ]
+  }
+}

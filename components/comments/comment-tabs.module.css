@@ -1,0 +1,171 @@
+/* Custom animations for tab transitions */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tabContent {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.tabContentSlide {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .tabTrigger {
+    min-height: 44px; /* Minimum touch target */
+    font-size: 14px;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.tabTrigger:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: -2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .tabTrigger {
+    border: 1px solid currentColor;
+  }
+
+  .tabTrigger[data-state="active"] {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .tabContent {
+    animation: none;
+  }
+
+  .tabContentSlide {
+    animation: none;
+  }
+}
+
+/* Badge animations */
+.badgeCount {
+  animation: badgePop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hide scrollbar for horizontal scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+/* Smooth scroll behavior */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Tab list container overflow handling */
+.tabListOverflow {
+  position: relative;
+}
+
+.tabListOverflow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, transparent, hsl(var(--background)));
+  pointer-events: none;
+}
+
+.tabListOverflow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to left, transparent, hsl(var(--background)));
+  pointer-events: none;
+}
+
+/* Tab content loading state */
+.tabContentLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) {
+  .tabTrigger:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Indicator animation for segmented tabs */
+.tabIndicator {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Content transition animation */
+.contentTransition {
+  transition: opacity 0.2s ease,
+              transform 0.2s ease;
+}
+
+.contentTransition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.contentTransition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentTransition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentTransition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}

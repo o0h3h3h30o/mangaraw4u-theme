@@ -1,0 +1,7 @@
+# Manga Reader CMS - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://donghentai.com/sitemap.xml
