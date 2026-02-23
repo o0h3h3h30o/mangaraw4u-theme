@@ -37,6 +37,8 @@ export function HotMangaSidebar({
   const { data, isLoading, error } = useQuery({
     queryKey: ["mangas", "top", activeTab, maxItems],
     queryFn: () => mangaApi.getTop(activeTab, maxItems),
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    gcTime: 30 * 60 * 1000, // keep in cache 30 minutes
   });
 
   return (
