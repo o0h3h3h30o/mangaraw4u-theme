@@ -17,15 +17,40 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // HTML pages: no cache (always fresh content)
-  // Static assets (JS/CSS/images) vẫn được Next.js tự cache với immutable hash
   headers: async () => [
+    // Homepage: CF cache 10 minutes
     {
-      source: "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2)).*)",
+      source: "/",
       headers: [
-        { key: "Cache-Control", value: "no-store, no-cache, must-revalidate" },
+        { key: "CDN-Cache-Control", value: "public, max-age=600, stale-while-revalidate=60" },
+      ],
+    },
+    // Manga detail: CF cache 1 hour
+    {
+      source: "/manga/:slug",
+      headers: [
+        { key: "CDN-Cache-Control", value: "public, max-age=3600, stale-while-revalidate=120" },
+      ],
+    },
+    // Chapter reader: CF cache 24 hours
+    {
+      source: "/manga/:slug/:chapter",
+      headers: [
+        { key: "CDN-Cache-Control", value: "public, max-age=86400, stale-while-revalidate=300" },
+      ],
+    },
+    // Browse: CF cache 5 minutes
+    {
+      source: "/browse",
+      headers: [
+        { key: "CDN-Cache-Control", value: "public, max-age=300, stale-while-revalidate=60" },
+      ],
+    },
+    // Auth/admin pages: no cache
+    {
+      source: "/(login|register|profile|admin)(.*)",
+      headers: [
         { key: "CDN-Cache-Control", value: "no-store" },
-        { key: "Cloudflare-CDN-Cache-Control", value: "no-store" },
       ],
     },
   ],
