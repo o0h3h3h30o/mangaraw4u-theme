@@ -75,7 +75,7 @@ export function EmptyState({
       {/* CTA Button */}
       {actionLabel && actionHref && (
         <Button asChild>
-          <Link href={actionHref}>{actionLabel}</Link>
+          <Link prefetch={false} href={actionHref}>{actionLabel}</Link>
         </Button>
       )}
     </div>

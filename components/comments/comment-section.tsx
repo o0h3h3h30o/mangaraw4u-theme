@@ -83,7 +83,7 @@ export function CommentSection({
               {t("loginRequired")}
             </p>
             <Button size="sm" variant="outline" asChild>
-              <Link href="/login">{tAuth("login")}</Link>
+              <Link prefetch={false} href="/login">{tAuth("login")}</Link>
             </Button>
           </div>
         )}

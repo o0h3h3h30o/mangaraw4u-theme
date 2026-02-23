@@ -76,7 +76,7 @@ export default function EditProfilePageClient() {
     <div className="container mx-auto max-w-7xl space-y-6 px-4 py-8">
       {/* Page Header */}
       <div className="flex items-center gap-4">
-        <Link href="/profile">
+        <Link prefetch={false} href="/profile">
           <Button variant="ghost" size="sm">
             <ArrowLeft className="mr-2 h-4 w-4" />
             {t("backToProfile")}

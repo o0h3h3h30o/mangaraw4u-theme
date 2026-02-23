@@ -62,7 +62,7 @@ export default function AdminMangaPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Manga ({total})</h1>
-        <Link href="/admin/manga/new">
+        <Link prefetch={false} href="/admin/manga/new">
           <Button><Plus className="h-4 w-4 mr-2" /> Add Manga</Button>
         </Link>
       </div>
@@ -106,7 +106,7 @@ export default function AdminMangaPage() {
                     <td className="p-3 font-medium max-w-[200px] truncate">{m.name}</td>
                     <td className="p-3 text-muted-foreground max-w-[150px] truncate">{m.slug}</td>
                     <td className="p-3 text-center">
-                      <Link href={`/admin/manga/${m.id}`} className="text-primary hover:underline">
+                      <Link prefetch={false} href={`/admin/manga/${m.id}`} className="text-primary hover:underline">
                         {m.chapter_count}
                       </Link>
                     </td>
@@ -115,12 +115,12 @@ export default function AdminMangaPage() {
                     <td className="p-3 text-center">{m.hot ? "Yes" : "No"}</td>
                     <td className="p-3 text-right">
                       <div className="flex justify-end gap-1">
-                        <Link href={`/admin/manga/${m.id}`} title="Chapters">
+                        <Link prefetch={false} href={`/admin/manga/${m.id}`} title="Chapters">
                           <Button variant="ghost" size="sm">
                             <BookOpen className="h-3.5 w-3.5" />
                           </Button>
                         </Link>
-                        <Link href={`/admin/manga/${m.id}`} title="Edit">
+                        <Link prefetch={false} href={`/admin/manga/${m.id}`} title="Edit">
                           <Button variant="ghost" size="sm">
                             <Pencil className="h-3.5 w-3.5" />
                           </Button>

@@ -53,6 +53,7 @@ export function Footer() {
               {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link
+                    prefetch={false}
                     href={link.href}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
@@ -70,6 +71,7 @@ export function Footer() {
               {userLinks.map((link) => (
                 <li key={link.href}>
                   <Link
+                    prefetch={false}
                     href={link.href}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
@@ -86,6 +88,7 @@ export function Footer() {
             <div className="flex gap-4">
               {socialLinks.map((link) => (
                 <Link
+                  prefetch={false}
                   key={link.href}
                   href={link.href}
                   target="_blank"
@@ -98,7 +101,7 @@ export function Footer() {
               ))}
             </div>
             <div className="mt-6">
-              <Link href="/" className="flex items-center space-x-2">
+              <Link prefetch={false} href="/" className="flex items-center space-x-2">
                 <BookOpen className="h-6 w-6" />
                 <span className="font-bold">{t("brandName")}</span>
               </Link>

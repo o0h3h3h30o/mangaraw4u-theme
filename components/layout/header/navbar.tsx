@@ -33,7 +33,7 @@ export function Navbar() {
           {/* Left: Mobile Nav + Logo + Desktop Nav Links */}
           <div className="flex items-center gap-2">
             <MobileNav />
-            <Link href="/" className="flex items-center">
+            <Link prefetch={false} href="/" className="flex items-center">
               <Image
                 src="/logo18.png"
                 alt="Logo"
@@ -47,14 +47,14 @@ export function Navbar() {
             {/* Desktop Navigation Links - Left side */}
             <nav className="hidden items-center gap-1 md:flex ml-4">
               <Button asChild variant="ghost" size="sm">
-                <Link href="/">{t("home")}</Link>
+                <Link prefetch={false} href="/">{t("home")}</Link>
               </Button>
               <GenresDropdown />
               <Button asChild variant="ghost" size="sm">
-                <Link href="/browse?sort=-views">{t("hot")}</Link>
+                <Link prefetch={false} href="/browse?sort=-views">{t("hot")}</Link>
               </Button>
               <Button asChild variant="ghost" size="sm">
-                <Link href="/browse">{t("recent")}</Link>
+                <Link prefetch={false} href="/browse">{t("recent")}</Link>
               </Button>
             </nav>
           </div>

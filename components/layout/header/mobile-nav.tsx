@@ -113,7 +113,7 @@ export function MobileNav() {
             </div>
           ) : (
             <Button asChild className="w-full shadow-sm">
-              <Link href="/login" onClick={() => setOpen(false)}>
+              <Link prefetch={false} href="/login" onClick={() => setOpen(false)}>
                 <LogIn className="mr-2 h-4 w-4" />
                 {t("common.login")}
               </Link>
@@ -126,6 +126,7 @@ export function MobileNav() {
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <Link
+                prefetch={false}
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
@@ -154,6 +155,7 @@ export function MobileNav() {
                 <div className="grid grid-cols-2 gap-2">
                   {genres.map((genre) => (
                     <Link
+                      prefetch={false}
                       key={genre.id}
                       href={`/browse?genre=${genre.slug}`}
                       onClick={() => setOpen(false)}
@@ -183,6 +185,7 @@ export function MobileNav() {
               <Separator />
               <nav className="flex flex-col space-y-1">
                 <Link
+                  prefetch={false}
                   href="/library"
                   onClick={() => setOpen(false)}
                   className="flex items-center space-x-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -191,6 +194,7 @@ export function MobileNav() {
                   <span>{t("navigation.library")}</span>
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/profile"
                   onClick={() => setOpen(false)}
                   className="flex items-center space-x-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -199,6 +203,7 @@ export function MobileNav() {
                   <span>{t("navigation.profile")}</span>
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/settings"
                   onClick={() => setOpen(false)}
                   className="flex items-center space-x-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"

@@ -34,7 +34,7 @@ export function UserMenu() {
   if (!isAuthenticated || !user) {
     return (
       <Button asChild variant="default" size="sm">
-        <Link href="/login">
+        <Link prefetch={false} href="/login">
           <LogIn className="mr-2 h-4 w-4" />
           {t("common.login")}
         </Link>
@@ -76,19 +76,19 @@ export function UserMenu() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href="/profile" className="cursor-pointer">
+          <Link prefetch={false} href="/profile" className="cursor-pointer">
             <User className="mr-2 h-4 w-4" />
             {t("navigation.profile")}
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/library" className="cursor-pointer">
+          <Link prefetch={false} href="/library" className="cursor-pointer">
             <Library className="mr-2 h-4 w-4" />
             {t("navigation.library")}
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/settings" className="cursor-pointer">
+          <Link prefetch={false} href="/settings" className="cursor-pointer">
             <Settings className="mr-2 h-4 w-4" />
             {t("navigation.settings")}
           </Link>

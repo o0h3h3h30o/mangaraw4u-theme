@@ -204,7 +204,7 @@ export default function AdminMangaEditPage() {
                     Delete ({selectedIds.size})
                   </Button>
                 )}
-                <Link href={`/admin/manga/${mangaId}/chapters/new`}>
+                <Link prefetch={false} href={`/admin/manga/${mangaId}/chapters/new`}>
                   <Button size="sm">
                     <Plus className="h-4 w-4 mr-2" />
                     Add Chapter
@@ -276,7 +276,7 @@ export default function AdminMangaEditPage() {
                       </td>
                       <td className="p-3 text-right">
                         <div className="flex justify-end gap-1">
-                          <Link href={`/admin/manga/${mangaId}/chapters/${ch.id}`}>
+                          <Link prefetch={false} href={`/admin/manga/${mangaId}/chapters/${ch.id}`}>
                             <Button variant="ghost" size="sm">
                               <Pencil className="h-3.5 w-3.5" />
                             </Button>

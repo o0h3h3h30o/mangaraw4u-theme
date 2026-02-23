@@ -76,11 +76,11 @@ const Breadcrumb = ({ name }: { name: string }) => {
   const t = useTranslations("navigation");
   return (
     <nav className="flex items-center text-xs sm:text-sm text-muted-foreground mb-4 overflow-hidden whitespace-nowrap mask-linear-fade">
-      <Link href="/" className="hover:text-primary transition-colors">
+      <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
         {t("home")}
       </Link>
       <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
-      <Link href="/browse" className="hover:text-primary transition-colors">
+      <Link prefetch={false} href="/browse" className="hover:text-primary transition-colors">
         {t("mangaList")}
       </Link>
       <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
@@ -375,6 +375,7 @@ function MangaDetail({
                     <User className="h-3.5 w-3.5" />
                     <span>Author: </span>
                     <Link
+                      prefetch={false}
                       href={`/browse?author=${encodeURIComponent(manga.author.name)}`}
                       className="hover:text-primary hover:underline transition-colors"
                     >
@@ -387,6 +388,7 @@ function MangaDetail({
                     <Paintbrush className="h-3.5 w-3.5" />
                     <span>Artist: </span>
                     <Link
+                      prefetch={false}
                       href={`/browse?author=${encodeURIComponent(manga.artist.name)}`}
                       className="hover:text-primary hover:underline transition-colors"
                     >
@@ -404,7 +406,7 @@ function MangaDetail({
               {manga.genres && manga.genres.length > 0 && (
                 <div className="hidden sm:flex flex-wrap gap-2 mt-2">
                   {manga.genres.map((g) => (
-                    <Link key={g.id} href={`/browse?genre=${g.slug}`}>
+                    <Link prefetch={false} key={g.id} href={`/browse?genre=${g.slug}`}>
                       <Badge
                         variant="secondary"
                         className="text-xs px-2.5 py-1 h-auto font-normal hover:bg-primary/10 hover:text-primary cursor-pointer transition-colors"
@@ -436,6 +438,7 @@ function MangaDetail({
                     className="min-w-0 flex-1 sm:flex-none sm:w-32 md:w-40 h-9 font-semibold rounded-full shadow-sm"
                   >
                     <Link
+                      prefetch={false}
                       href={`/manga/${manga.slug}/${readingProgress.chapterSlug}`}
                     >
                       <BookOpen className="mr-1.5 h-4 w-4 shrink-0" />
@@ -459,7 +462,7 @@ function MangaDetail({
                         : "sm:w-32 md:w-40 shadow-sm"
                     )}
                   >
-                    <Link href={`/manga/${manga.slug}/${firstChapterSlug}`}>
+                    <Link prefetch={false} href={`/manga/${manga.slug}/${firstChapterSlug}`}>
                       <PawPrint className="mr-1.5 h-4 w-4 shrink-0" />
                       <span className="text-xs sm:text-sm truncate">
                         {tCommon("readNow")}
@@ -493,7 +496,7 @@ function MangaDetail({
             <div className="mt-4 sm:hidden">
               <div className="flex flex-wrap gap-1.5">
                 {manga.genres.map((g) => (
-                  <Link key={g.id} href={`/browse?genre=${g.slug}`}>
+                  <Link prefetch={false} key={g.id} href={`/browse?genre=${g.slug}`}>
                     <Badge
                       variant="secondary"
                       className="text-[11px] px-2 py-0.5 h-auto font-normal hover:bg-primary/10 hover:text-primary cursor-pointer transition-colors"
@@ -580,6 +583,7 @@ function MangaDetail({
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 transition-opacity duration-200">
                   {filteredChapters.map((chapter) => (
                     <Link
+                      prefetch={false}
                       key={chapter.id}
                       href={`/manga/${manga.slug}/${chapter.slug}`}
                       className="flex justify-between py-2.5 border-b border-border/40 hover:bg-secondary/20 hover:pl-2 transition-all duration-200 rounded-sm"

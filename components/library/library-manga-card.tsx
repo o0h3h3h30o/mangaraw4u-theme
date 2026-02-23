@@ -49,6 +49,7 @@ export const LibraryMangaCard = memo(function LibraryMangaCard({
     <div className={cn("group relative flex flex-col space-y-1.5", className)}>
       {/* Cover Image Container */}
       <Link
+        prefetch={false}
         href={continueUrl}
         className={cn(
           "relative aspect-[3/4] overflow-hidden rounded-lg bg-muted",
@@ -107,7 +108,7 @@ export const LibraryMangaCard = memo(function LibraryMangaCard({
 
       {/* Title & Metadata */}
       <div className="space-y-0.5 pt-1">
-        <Link href={`/manga/${manga.slug}`}>
+        <Link prefetch={false} href={`/manga/${manga.slug}`}>
           <h3 className="font-semibold capitalize text-sm line-clamp-1 hover:text-primary transition-colors">
             {manga.name}
           </h3>

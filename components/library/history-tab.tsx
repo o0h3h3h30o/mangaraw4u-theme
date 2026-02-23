@@ -93,6 +93,7 @@ export function HistoryTab() {
           return (
             <div key={slug} className="group relative flex flex-col space-y-1.5">
               <Link
+                prefetch={false}
                 href={`/manga/${slug}/${item.chapterSlug}`}
                 className="relative aspect-[3/4] overflow-hidden rounded-lg bg-muted shadow-sm hover:shadow-md transition-shadow"
               >
@@ -112,7 +113,7 @@ export function HistoryTab() {
                   </span>
                 </div>
               </Link>
-              <Link href={`/manga/${slug}`}>
+              <Link prefetch={false} href={`/manga/${slug}`}>
                 <h3 className="font-semibold capitalize text-sm line-clamp-1 group-hover:text-primary transition-colors">
                   {manga.name}
                 </h3>

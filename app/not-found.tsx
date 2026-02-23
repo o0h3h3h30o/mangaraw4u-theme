@@ -55,7 +55,7 @@ export default function NotFound() {
             size="lg"
             className="rounded-full gap-2 shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all min-w-[140px]"
           >
-            <Link href="/">
+            <Link prefetch={false} href="/">
               <Home className="w-4 h-4" />
               {t("homeButton")}
             </Link>

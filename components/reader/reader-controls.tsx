@@ -84,7 +84,7 @@ export function ReaderControls({
         )}
       >
         <div className="flex items-center gap-4">
-          <Link href={`/manga/${mangaSlug}`}>
+          <Link prefetch={false} href={`/manga/${mangaSlug}`}>
             <Button variant="ghost" size="icon">
               <ChevronLeft className="h-5 w-5" />
             </Button>
@@ -96,6 +96,7 @@ export function ReaderControls({
                 : "Chapter Reader"}
             </h1>
             <Link
+              prefetch={false}
               href={`/manga/${mangaSlug}`}
               className="text-xs text-muted-foreground hover:underline"
             >

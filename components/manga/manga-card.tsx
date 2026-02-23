@@ -59,6 +59,7 @@ export const MangaCard = memo(function MangaCard({
       onMouseEnter={handleMouseEnter}
     >
       <Link
+        prefetch={false}
         href={mangaHref}
         className={cn(
           "relative aspect-[3/4] overflow-hidden rounded-lg bg-muted",
@@ -100,7 +101,7 @@ export const MangaCard = memo(function MangaCard({
 
       <div className="space-y-0.5 pt-1">
         {/* Title */}
-        <Link href={mangaHref}>
+        <Link prefetch={false} href={mangaHref}>
           <h3 className="font-semibold capitalize text-sm line-clamp-1 group-hover:text-primary transition-colors">
             {manga.name}
           </h3>
@@ -110,6 +111,7 @@ export const MangaCard = memo(function MangaCard({
         <div className="flex items-center justify-between text-xs text-muted-foreground gap-2">
           {manga.latest_chapter ? (
             <Link
+              prefetch={false}
               href={`${mangaHref}/${manga.latest_chapter.slug}`}
               className="truncate hover:text-primary transition-colors"
               title={manga.latest_chapter.name}
