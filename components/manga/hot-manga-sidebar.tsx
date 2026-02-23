@@ -10,7 +10,6 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import Image from "next/image";
 import { Star } from "lucide-react";
 
 import type { MangaListItem } from "@/types/manga";
@@ -18,7 +17,6 @@ import { mangaApi } from "@/lib/api/endpoints/manga";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { HotMangaSidebarSkeleton } from "@/components/layout/loading";
 import { cn } from "@/lib/utils";
-import { getShimmerPlaceholder } from "@/lib/utils/image-placeholder";
 
 export interface HotMangaSidebarProps {
   maxItems?: number;
@@ -96,6 +94,7 @@ interface RankedMangaCardProps {
 function RankedMangaCard({ manga, rank }: RankedMangaCardProps) {
   return (
     <Link
+      prefetch={false}
       href={`/manga/${manga.slug}`}
       className="flex items-center gap-3 p-2 rounded-lg hover:bg-accent transition-colors group"
     >
@@ -114,16 +113,12 @@ function RankedMangaCard({ manga, rank }: RankedMangaCardProps) {
 
       {/* Thumbnail */}
       <div className="relative h-16 w-12 flex-shrink-0 rounded overflow-hidden bg-muted">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={manga.cover_full_url}
           alt={manga.name}
-          fill
-          sizes="20vw"
-          style={{ objectFit: "cover" }}
-          className="group-hover:scale-105 transition-transform"
-          placeholder="blur"
-          blurDataURL={getShimmerPlaceholder()}
-          priority={rank <= 3}
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform"
+          loading={rank <= 3 ? "eager" : "lazy"}
         />
       </div>
 

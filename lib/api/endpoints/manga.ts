@@ -183,7 +183,9 @@ export const mangaApi = {
     if (!res.ok) throw new Error(`Failed to fetch manga detail: HTTP ${res.status}`);
     const json = await res.json();
     if (!json.success || !json.data) throw new Error("Invalid response format");
-    return json.data as Manga;
+    const manga = json.data as Manga;
+    manga.cover_full_url = `${COVER_CDN_URL}/cover/${manga.slug}.jpg`;
+    return manga;
   },
 
   getChapters: async (slug: string, params?: ChapterListParams): Promise<PaginatedResponse<ChapterListItem>> => {
