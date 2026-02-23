@@ -84,6 +84,8 @@ function MangaCarouselSection({
     queryKey: ["mangas", "manga-carousel"],
     queryFn: () => mangaApi.getTop("day", 10),
     initialData: initialMangas || undefined,
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    gcTime: 30 * 60 * 1000,
   });
 
   if (isLoading) {
@@ -122,7 +124,8 @@ function NewestMangaSection() {
   const { data, isLoading } = useQuery({
     queryKey: ["mangas", "newest"],
     queryFn: () => mangaApi.getNewest(10),
-    staleTime: 60_000,
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    gcTime: 30 * 60 * 1000,
   });
 
   if (isLoading) {
