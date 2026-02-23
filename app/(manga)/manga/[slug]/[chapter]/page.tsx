@@ -5,6 +5,8 @@
 
 import type { Metadata } from "next";
 
+export const revalidate = 86400; // 24 hours
+
 import { generateChapterMetadata } from "@/lib/seo/metadata";
 import { chapterApi } from "@/lib/api/endpoints/chapter";
 import { ReaderView } from "@/components/reader/reader-view";

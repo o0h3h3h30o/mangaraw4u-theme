@@ -6,6 +6,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const revalidate = 3600; // 1 hour
+
 import { generateMangaMetadata } from "@/lib/seo/metadata";
 import {
   generateMangaSchema,

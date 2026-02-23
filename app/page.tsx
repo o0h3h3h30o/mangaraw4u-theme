@@ -1,3 +1,5 @@
+export const revalidate = 600; // 10 minutes
+
 import { generateDefaultMetadata } from "@/lib/seo/metadata";
 import { generateWebsiteSchema } from "@/lib/seo/json-ld";
 import { mangaApi } from "@/lib/api/endpoints/manga";
