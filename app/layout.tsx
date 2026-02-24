@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Road_Rage } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { GoogleOAuthProvider } from "@/components/providers/google-oauth-provider";
@@ -48,6 +49,23 @@ export default async function RootLayout({
             __html: JSON.stringify(generateWebsiteSchema()),
           }}
         />
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={`${notoSans.variable} ${roadRage.variable} antialiased`}>
         <NextIntlClientProvider
