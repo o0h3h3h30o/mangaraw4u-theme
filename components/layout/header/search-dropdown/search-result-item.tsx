@@ -45,7 +45,7 @@ export function SearchResultItem({
       {/* Thumbnail */}
       <div className="relative flex-shrink-0 w-14 h-20 bg-muted rounded-sm overflow-hidden">
         <img
-          src={manga.cover_full_url}
+          src={manga.cover_thumb_url}
           alt={manga.name}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"

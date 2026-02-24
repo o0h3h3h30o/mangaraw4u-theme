@@ -30,6 +30,7 @@ export interface MangaReference {
   name_alt?: string;
   slug: string;
   cover_full_url: string;
+  cover_thumb_url: string;
 }
 
 /**

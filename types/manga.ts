@@ -103,6 +103,7 @@ export interface Manga {
   is_hot: boolean;
   is_reviewed?: number;
   cover_full_url: string;
+  cover_thumb_url: string;
   created_at: string;
   updated_at: string;
   genres?: Genre[];
@@ -131,6 +132,7 @@ export interface MangaListItem {
   is_hot: boolean;
   caution?: boolean;
   cover_full_url: string;
+  cover_thumb_url: string;
   updated_at: string;
   latest_chapter?: ChapterReference;
   artist?: Pick<Artist, "id" | "name" | "slug">;

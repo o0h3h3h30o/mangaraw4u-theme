@@ -98,7 +98,7 @@ export function HistoryTab() {
                 className="relative aspect-[3/4] overflow-hidden rounded-lg bg-muted shadow-sm hover:shadow-md transition-shadow"
               >
                 <Image
-                  src={manga.cover_full_url}
+                  src={manga.cover_thumb_url}
                   alt={manga.name}
                   fill
                   sizes="(max-width: 640px) 205px, 195px"

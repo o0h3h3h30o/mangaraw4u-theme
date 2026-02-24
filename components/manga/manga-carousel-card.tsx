@@ -52,7 +52,7 @@ export const MangaCarouselCard = memo(function MangaCarouselCard({
       >
         {/* Cover Image */}
         <Image
-          src={manga.cover_full_url}
+          src={manga.cover_thumb_url}
           alt={manga.name}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"

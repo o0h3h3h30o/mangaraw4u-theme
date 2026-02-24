@@ -61,6 +61,7 @@ function mapMangaListItem(item: {
     name: toTitleCase(item.manga_name),
     slug: item.manga_slug,
     cover_full_url: `${COVER_CDN_URL}/cover/${item.manga_slug}.jpg`,
+    cover_thumb_url: `${COVER_CDN_URL}/cover/${item.manga_slug}-thumb.jpg`,
     is_hot: item.hot === 1,
     caution: item.caution === 1,
     status: 1,
@@ -127,7 +128,7 @@ export const mangaApi = {
     return json.data.map(mapMangaListItem);
   },
 
-  getBySlugs: async (slugs: string[]): Promise<Record<string, { id: number; name: string; slug: string; cover_full_url: string; average_rating: number }>> => {
+  getBySlugs: async (slugs: string[]): Promise<Record<string, { id: number; name: string; slug: string; cover_full_url: string; cover_thumb_url: string; average_rating: number }>> => {
     if (slugs.length === 0) return {};
     const res = await fetch(`${NODE_API_URL}/api/manga/by-slugs`, {
       method: "POST",
@@ -137,13 +138,14 @@ export const mangaApi = {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
     if (!json.success || !Array.isArray(json.data)) return {};
-    const map: Record<string, { id: number; name: string; slug: string; cover_full_url: string; average_rating: number }> = {};
+    const map: Record<string, { id: number; name: string; slug: string; cover_full_url: string; cover_thumb_url: string; average_rating: number }> = {};
     for (const item of json.data) {
       map[item.manga_slug] = {
         id: item.manga_id,
         name: toTitleCase(item.manga_name),
         slug: item.manga_slug,
         cover_full_url: `${COVER_CDN_URL}/cover/${item.manga_slug}.jpg`,
+        cover_thumb_url: `${COVER_CDN_URL}/cover/${item.manga_slug}-thumb.jpg`,
         average_rating: parseFloat(String(item.average_rating)) || 0,
       };
     }
@@ -185,6 +187,7 @@ export const mangaApi = {
     if (!json.success || !json.data) throw new Error("Invalid response format");
     const manga = json.data as Manga;
     manga.cover_full_url = `${COVER_CDN_URL}/cover/${manga.slug}.jpg`;
+    manga.cover_thumb_url = `${COVER_CDN_URL}/cover/${manga.slug}-thumb.jpg`;
     return manga;
   },
 

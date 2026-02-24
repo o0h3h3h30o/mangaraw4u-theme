@@ -68,7 +68,7 @@ export const MangaCard = memo(function MangaCard({
       >
         {/* Cover Image */}
         <Image
-          src={imgError ? getShimmerPlaceholder() : manga.cover_full_url}
+          src={imgError ? getShimmerPlaceholder() : manga.cover_thumb_url}
           alt={manga.name}
           fill
           sizes="(max-width: 640px) 205px, 195px"
