@@ -169,7 +169,8 @@ export function MangaForm({ initialData, onSubmit, submitLabel }: MangaFormProps
     }
   };
 
-  const currentCoverUrl = coverPreview || (initialData?.slug ? `/cover/${initialData.slug}.jpg` : null);
+  const coverCdnUrl = process.env.NEXT_PUBLIC_COVER_CDN_URL || "";
+  const currentCoverUrl = coverPreview || (initialData?.slug ? `${coverCdnUrl}/cover/${initialData.slug}.jpg` : null);
 
   const handleSubmit = async () => {
     if (!name || !slug) {
