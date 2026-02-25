@@ -163,3 +163,68 @@ node scripts/download-covers.js
 # Hoặc chạy nền
 nohup node scripts/download-covers.js >> download.log 2>&1 &
 ```
+
+
+
+1. Crawl trang chủ (lấy danh sách manga + chapter mới)
+
+# Crawl 3 trang đầu (mặc định)
+node crawler/run-crawl.js
+
+# Crawl 10 trang
+node crawler/run-crawl.js --pages 10
+
+# Crawl chỉ 1 source cụ thể
+node crawler/run-crawl.js --source jestful
+
+# Crawl 1 source, 5 trang
+node crawler/run-crawl.js --source jestful --pages 5
+
+# Dry-run (chỉ parse, không ghi DB)
+node crawler/run-crawl.js --dry-run
+
+# Xem danh sách parsers
+node crawler/run-crawl.js --list
+2. Crawl chapter pages (ảnh từng chap)
+Sau khi crawl trang chủ xong, chạy tiếp để lấy ảnh cho các chapter chưa publish:
+
+
+# Crawl tối đa 50 chapters (mặc định)
+node crawler/run-crawl-chapters.js
+
+# Crawl tối đa 100 chapters
+node crawler/run-crawl-chapters.js --limit 100
+
+# Chỉ crawl chapters của 1 manga cụ thể
+node crawler/run-crawl-chapters.js --manga-id 42
+3. Download + resize cover (nếu cần)
+
+# Download cover cho manga chưa có ảnh
+node scripts/download-covers.js
+
+# Force download lại tất cả
+node scripts/download-covers.js --force
+4. Tạo thumbnail cho cover đã có sẵn
+
+# Tạo thumb cho cover chưa có thumb
+node scripts/generate-thumbs.js
+
+# Force tạo lại tất cả thumb
+node scripts/generate-thumbs.js --force
+Flow đầy đủ lần đầu
+
+node crawler/run-crawl.js --pages 10    # Crawl danh sách manga
+node crawler/run-crawl-chapters.js      # Crawl ảnh chapters
+node scripts/download-covers.js         # Download cover
+Lần chạy sau (cron hàng ngày) chỉ cần:
+
+
+node crawler/run-crawl.js               # 3 trang đầu
+node crawler/run-crawl-chapters.js      # Chapters mới
+
+tải ảnh
+cd /var/www/manga/api && nohup node scripts/download-covers.js > /tmp/download-covers.log 2>&1 &
+
+theo dõi
+tail -f /tmp/download-covers.log
+
